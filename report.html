@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Issue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+    <button onclick="logout()">Logout</button>
+
+<h1>Report Community Issue</h1>
+
+<form id="issueForm">
+
+    <input
+        type="text"
+        id="title"
+        placeholder="Issue Title"
+        required
+    >
+
+    <textarea
+        id="description"
+        placeholder="Describe the issue"
+        required
+    ></textarea>
+
+    <select id="category">
+        <option>Pothole</option>
+        <option>Water Leakage</option>
+        <option>Streetlight</option>
+        <option>Garbage</option>
+    </select>
+
+    <input
+        type="file"
+        id="image"
+        accept="image/*"
+    >
+
+    <br><br>
+
+    <img
+        id="preview"
+        width="250"
+        style="display:none;border-radius:10px;"
+    >
+
+    <br><br>
+    <h3>Select Issue Location</h3>
+
+<div id="map"
+     style="height:400px; width:100%; border-radius:10px;">
+</div>
+
+<br>
+
+    <input
+        type="text"
+        id="latitude"
+        placeholder="Latitude"
+        readonly
+    >
+
+    <input
+        type="text"
+        id="longitude"
+        placeholder="Longitude"
+        readonly
+    >
+
+    <br><br>
+
+    <p><strong>📍 Click on the map to select the issue location.</strong></p>
+    <button type="submit">
+        Submit Issue
+    </button>
+
+</form>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+

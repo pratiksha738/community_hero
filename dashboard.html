@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hero Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Community Hero Dashboard</h1>
+
+    <button id="logoutBtn">
+        Logout
+    </button>
+
+</header>
+
+<section class="controls">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search Issues">
+
+    <select id="categoryFilter">
+
+        <option value="All">All Categories</option>
+        <option value="Pothole">Pothole</option>
+        <option value="Garbage">Garbage</option>
+        <option value="Streetlight">Streetlight</option>
+        <option value="Water Leakage">Water Leakage</option>
+
+    </select>
+
+    <select id="statusFilter">
+
+        <option value="All">All Status</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Resolved">Resolved</option>
+
+    </select>
+
+</section>
+
+<section class="stats">
+
+    <div class="card">
+        <h2 id="total">0</h2>
+        <p>Total Issues</p>
+    </div>
+
+    <div class="card">
+        <h2 id="pending">0</h2>
+        <p>Pending</p>
+    </div>
+
+    <div class="card">
+        <h2 id="progress">0</h2>
+        <p>In Progress</p>
+    </div>
+
+    <div class="card">
+        <h2 id="resolved">0</h2>
+        <p>Resolved</p>
+    </div>
+
+</section>
+
+<section>
+
+    <div id="map"></div>
+
+</section>
+
+<section id="issueList">
+
+</section>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
